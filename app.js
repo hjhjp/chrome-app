@@ -1,7 +1,10 @@
-const title = document.querySelector(".title");
+const loginForm = document.querySelector('#login-form');
+const loginInput = document.querySelector('#login-form input');
 
-function resize1() {
-  title.style.color = "red";
+
+function onLoginSubmit(event) {
+  event.preventDefault(); // 브라우저의 기본동작 막기
+  console.log(loginInput.value);
 }
 
-window.addEventListener("resize", resize1);
+loginForm.addEventListener("submit",onLoginSubmit);
